@@ -1,6 +1,7 @@
 :root {
     --animate-delay: 4s;
-  }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,15 +13,12 @@ body {
 }
 
 .loader {
-    transform-style: preserve-3d;
-    perspective: 1000;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: black;
     animation: change-color 20s linear both;
-
 }
 
 
@@ -38,36 +36,33 @@ body {
     transition: border 0.25s;
     animation: loader 20s both linear;
 }
-img{
+
+img {
     width: 150px;
     height: 150px;
 
 }
 
-
 @keyframes loader {
     90% {
-        transform:  rotateZ(3600deg); 
+        transform: rotateZ(3600deg);
         background: black;
         border: 5px solid gray;
-    
+
         width: 50px;
         height: 50px;
-    } 
-    100%{
+    }
+
+    100% {
         width: 200px;
         height: 200px;
         background: green;
         border: green;
-    
-     
-
     }
-
 }
-@keyframes change-color{
-    100%{
+
+@keyframes change-color {
+    100% {
         filter: hue-rotate(1440deg);
     }
-
 }
